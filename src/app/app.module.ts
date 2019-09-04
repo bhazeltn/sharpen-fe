@@ -1,3 +1,4 @@
+
 import { SkaterService } from './shared/skater.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,12 +9,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule,
   MatButtonModule, MatCardModule, MatGridListModule} from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { SkatersComponent } from './skaters/skaters.component';
+import { SkaterListComponent } from './skaters/skater-list/skater-list.component';
+import { EditSkaterComponent } from './skaters/edit-skater/edit-skater.component';
+import { AddSkaterComponent } from './skaters/add-skater/add-skaters.components';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkatersComponent
+    SkatersComponent,
+    SkaterListComponent,
+    EditSkaterComponent,
+    AddSkaterComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +36,8 @@ import { SkatersComponent } from './skaters/skaters.component';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    ReactiveFormsModule
   ],
   providers: [
     SkaterService

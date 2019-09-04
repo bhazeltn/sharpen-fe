@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-skater',
   templateUrl: './add-skater.component.html',
-  styleUrls: ['../skater.component.css']
+  styleUrls: ['../skaters.component.scss']
 })
 
 export class AddSkaterComponent implements OnInit {
@@ -22,7 +22,7 @@ export class AddSkaterComponent implements OnInit {
     private ngZone: NgZone,
     private router: Router,
     public skaterService: SkaterService
-  ){ }
+  ) { }
 
   addIssue() {
     this.skaterForm = this.fb.group({
@@ -36,8 +36,8 @@ export class AddSkaterComponent implements OnInit {
 
   submitForm() {
     this.skaterService.addSkater(this.skaterForm.value).subscribe(res => {
-      console.log('Skater added!')
-      this.ngZone.run(() => this.router.navigateByUrl('/skaters-list'))
+      console.log('Skater added!');
+      this.ngZone.run(() => this.router.navigateByUrl('/skater-list'));
     });
   }
 

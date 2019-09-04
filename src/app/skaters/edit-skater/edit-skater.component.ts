@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-edit-skater',
   templateUrl: './edit-skater.component.html',
-  styleUrls: ['../skaters.component.css']
+  styleUrls: ['../skaters.component.scss']
 })
 
 export class EditSkaterComponent implements OnInit {

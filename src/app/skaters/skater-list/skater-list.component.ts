@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-skater-list',
   templateUrl: './skater-list.component.html',
-  styleUrls: ['../skater.component.css']
+  styleUrls: ['../skaters.component.scss']
 })
 export class SkaterListComponent implements OnInit {
 
@@ -17,7 +17,7 @@ export class SkaterListComponent implements OnInit {
 
   constructor(
     public skaterService: SkaterService
-  ){ }
+  ) { }
 
    // Issues list
    loadSkaters() {
@@ -27,10 +27,9 @@ export class SkaterListComponent implements OnInit {
   }
     // Delete issue
   deleteSkater(data){
-      var index = index = this.SkaterList.map(x => {return x.first_name}).indexOf(data.first_name);
+      var index = index = this.SkaterList.map(x => x.first_name).indexOf(data.first_name);
       return this.skaterService.deleteSkater(data.id).subscribe(
         res => {this.SkaterList.splice(index, 1);
-      console.log('Skater deleted!')
     });
    }
 }
