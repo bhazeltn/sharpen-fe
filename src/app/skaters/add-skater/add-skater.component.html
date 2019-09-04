@@ -1,0 +1,31 @@
+<div class="container wrapper wrapper2">
+    <div class="row">
+        <!-- Form -->
+        <div class="col-md-12">
+            <h3>Add Skater</h3>
+            <form [formGroup]="skaterForm" (ngSubmit)="submitForm()" novalidate>
+                <div class="form-group">
+                    <label>Frist Name</label>
+                    <input type="text" formControlName="first_name" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="last_name" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>E-Mail</label>
+                    <input type="text" formControlName="email" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>Desired Hollow</label>
+                    <input type="text" formControlName="hollow" class="form-control" maxlength="20">
+                </div>
+                <div class="form-group">
+                    <label>Interval Between Sharpening</label>
+                    <input type="text" formControlName="interval" class="form-control" maxlength="20">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

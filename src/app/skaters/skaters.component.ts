@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Skater } from './skater';
-import { SkaterService } from './skater.service';
+import { Skater } from '../shared/skater';
+import { SkaterService } from '../shared/skater.service';
 
 @Component({
   selector: 'app-skaters',

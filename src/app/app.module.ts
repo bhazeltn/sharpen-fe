@@ -1,5 +1,5 @@
+import { SkaterService } from './shared/skater.service';
 import { HttpClientModule } from '@angular/common/http';
-import { SkaterService } from './skaters/skater.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
