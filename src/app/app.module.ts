@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule} from '@angular/material';
+import { SkatersComponent } from './skaters/skaters.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SkatersComponent
   ],
   imports: [
     BrowserModule,
