@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatCardModule} from '@angular/material';
+import {MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatCardModule, MatGridListModule} from '@angular/material';
 import { SkatersComponent } from './skaters/skaters.component';
 
 @NgModule({
@@ -21,7 +21,8 @@ import { SkatersComponent } from './skaters/skaters.component';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
