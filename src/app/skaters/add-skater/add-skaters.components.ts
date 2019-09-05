@@ -14,7 +14,7 @@ export class AddSkaterComponent implements OnInit {
   skaterArr: any = [];
 
   ngOnInit() {
-    this.addIssue();
+    this.addSkater();
   }
 
   constructor(
@@ -24,7 +24,7 @@ export class AddSkaterComponent implements OnInit {
     public skaterService: SkaterService
   ) { }
 
-  addIssue() {
+  addSkater() {
     this.skaterForm = this.fb.group({
       first_name: [''],
       last_name: [''],
@@ -36,7 +36,7 @@ export class AddSkaterComponent implements OnInit {
 
   submitForm() {
     this.skaterService.addSkater(this.skaterForm.value).subscribe(res => {
-      console.log('Skater added!');
+      alert(this.skaterForm.value.first_name + ' ' + this.skaterForm.value.last_name + ' added');
       this.ngZone.run(() => this.router.navigateByUrl('/skater-list'));
     });
   }
