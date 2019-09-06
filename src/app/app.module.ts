@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule,
-  MatButtonModule, MatCardModule, MatGridListModule, MatInputModule} from '@angular/material';
+  MatButtonModule, MatCardModule, MatGridListModule, MatInputModule, MatAutocompleteModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -41,7 +41,8 @@ import { AddSkaterComponent } from './skaters/add-skater/add-skaters.components'
     MatGridListModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatAutocompleteModule
   ],
   providers: [
     SkaterService

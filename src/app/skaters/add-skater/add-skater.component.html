@@ -1,72 +1,37 @@
+<mat-card class="skater-card" style="margin: auto; margin-top: 15px;">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Add New Skater</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="skaterForm" (ngSubmit)="submitForm()" novalidate>
+      <mat-form-field appearance="outline" style="margin-right: 10px;" class="form-group">
+          <input matInput type="text" name="first_name" placeholder="First Name" formControlName="first_name">
+      </mat-form-field>
+      <span> </span>
+      <mat-form-field appearance="outline" class="form-group">
+          <input matInput type="text" name="last_name" placeholder="Last Name" formControlName="last_name">
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline" class="form-group">
+          <input matInput type="text" name="email" placeholder="E-Mail Address" formControlName="email">
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline" style="margin-right: 10px;" class="form-group">
+          <input matInput type="text" name="hollow" placeholder="Desired Hollow" formControlName="hollow">
+      </mat-form-field>
+      <span> </span>
+      <mat-form-field appearance="outline" class="form-group">
+          <input matInput type="text" name="interval" placeholder="Sharpening Interval" formControlName="interval">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="submitForm()">Submit</button>
+  </mat-card-actions>
+</mat-card>
 
-
-
-<!-- <div class="container wrapper wrapper2">
-    <div class="row">
-        <!-- Form -->
-        <!-- <div class="col-md-12">
-            <h3>Add Skater</h3>
-            <form [formGroup]="skaterForm" (ngSubmit)="submitForm()" novalidate>
-                <div class="form-group">
-                    <label>Frist Name</label>
-                    <input type="text" formControlName="first_name" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Last Name</label>
-                    <input type="text" formControlName="last_name" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>E-Mail</label>
-                    <input type="text" formControlName="email" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Desired Hollow</label>
-                    <input type="text" formControlName="hollow" class="form-control" maxlength="20">
-                </div>
-                <div class="form-group">
-                    <label>Interval Between Sharpening</label>
-                    <input type="text" formControlName="interval" class="form-control" maxlength="20">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-<div class="container" layout="row">
-  <mat-card style="border: 1px solid black; max-width: 25%; margin: auto; margin-top: 10px;">
-    <mat-card-header>
-      <mat-card-title>
-        <h1>Add New Skater</h1>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <form [formGroup]="skaterForm" (ngSubmit)="submitForm()" novalidate>
-        <mat-form-field appearance="outline" style="margin-right: 10px;" class="form-group">
-            <input matInput type="text" name="first_name" placeholder="First Name" formControlName="first_name">
-        </mat-form-field>
-        <span> </span>
-        <mat-form-field appearance="outline" class="form-group">
-            <input matInput type="text" name="last_name" placeholder="Last Name" formControlName="last_name">
-        </mat-form-field>
-        <br />
-        <mat-form-field appearance="outline" class="form-group">
-            <input matInput type="text" name="email" placeholder="E-Mail Address" formControlName="email">
-        </mat-form-field>
-        <br />
-        <mat-form-field appearance="outline" style="margin-right: 10px;" class="form-group">
-            <input matInput type="text" name="hollow" placeholder="Desired Hollow" formControlName="hollow">
-        </mat-form-field>
-        <span> </span>
-        <mat-form-field appearance="outline" class="form-group">
-            <input matInput type="text" name="interval" placeholder="Sharpening Interval" formControlName="interval">
-        </mat-form-field>
-      </form>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-raised-button (click)="submitForm()">Submit</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
 
 
 

@@ -1,5 +1,6 @@
 import { SkaterService } from '../../shared/skater.service';
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-skater-list',
@@ -19,7 +20,7 @@ export class SkaterListComponent implements OnInit {
     public skaterService: SkaterService
   ) { }
 
-   // Issues list
+   // Skater list
    loadSkaters() {
     return this.skaterService.getSkaters().subscribe((data: {}) => {
       this.SkaterList = data;
@@ -32,4 +33,8 @@ export class SkaterListComponent implements OnInit {
         res => {this.SkaterList.splice(index, 1);
     });
    }
+}
+export class SkaterAutocomplete {
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
 }

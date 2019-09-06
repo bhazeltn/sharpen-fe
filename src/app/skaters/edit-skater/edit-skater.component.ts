@@ -49,7 +49,8 @@ export class EditSkaterComponent implements OnInit {
   submitForm(){
     var id = this.actRoute.snapshot.paramMap.get('id');
     this.skaterService.updateSkater(id, this.updateSkaterForm.value).subscribe(res => {
-      this.ngZone.run(() => this.router.navigateByUrl('/skaters-list'))
+      alert(this.updateSkaterForm.value.first_name + ' ' + this.updateSkaterForm.value.last_name + ' updated');
+      this.ngZone.run(() => this.router.navigateByUrl('/skater-list'));
     });
   }
 
